@@ -22,6 +22,8 @@ def explain_with_white_box(texts):
 
         # Get the explanations with transformers-interpret
         explainer = SequenceClassificationExplainer(model, tokenizer)
+
+        explainer(text)
         
         # Get the predictions (logits)
         logits = model(**inputs).logits
